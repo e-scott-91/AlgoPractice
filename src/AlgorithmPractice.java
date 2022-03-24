@@ -1,4 +1,4 @@
-import binarySearch.SearchAndReturnIndex;
+import twoPointers.PalindromeInt;
 import twoPointers.RotateArray;
 
 public class AlgorithmPractice {
@@ -12,6 +12,9 @@ public class AlgorithmPractice {
         RotateArray rotateArray = new RotateArray();
         int[] array = new int[]{1,5,6,7,8,9};
         rotateArray.rotate(array, 2);
+        PalindromeInt palendrome = new PalindromeInt();
+        Boolean result = palendrome.isPalindrome(1231);
+        System.out.println(result);
     }
 
 
