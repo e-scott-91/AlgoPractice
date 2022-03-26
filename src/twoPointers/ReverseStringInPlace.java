@@ -9,8 +9,7 @@ public class ReverseStringInPlace {
         int end = s.length -1;
         while (start <= end) {
             char firstValueToSwap = s[start];
-            char secondValueToSwap = s[end];
-            s[start] = secondValueToSwap;
+            s[start] = s[end];
             s[end] = firstValueToSwap;
             start++;
             end--;
