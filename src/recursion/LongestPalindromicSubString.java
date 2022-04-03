@@ -11,7 +11,6 @@ public class LongestPalindromicSubString {
         for(int i = 0; i < n; i++) {
             String s1 = helper(s, i, i);
             String s2 = helper(s, i, i + 1);
-
             res = res.length() > s1.length() ? res : s1;
             res = res.length() > s2.length() ? res : s2;
         }
