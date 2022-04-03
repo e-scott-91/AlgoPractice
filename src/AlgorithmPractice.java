@@ -1,3 +1,4 @@
+import dynamicProgramming.LongestPalindromicSubstring;
 import twoPointers.PalindromeInt;
 import twoPointers.RotateArray;
 
@@ -15,6 +16,8 @@ public class AlgorithmPractice {
         PalindromeInt palendrome = new PalindromeInt();
         Boolean result = palendrome.isPalindrome(1231);
         System.out.println(result);
+        LongestPalindromicSubstring palindromicSubstring = new LongestPalindromicSubstring();
+        String result1 = palindromicSubstring.longestPalindrome("abcbdeda");
     }
 
 
