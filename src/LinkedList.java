@@ -2,15 +2,13 @@ public class LinkedList {
 
     public ListNode reverseList(ListNode head) {
         ListNode prev = null;
-        ListNode current = head;
-        ListNode next = null;
-        while (current != null) {
-            next = current.next;
-            current.next = prev;
-            prev = current;
-            current = next;
+
+        while (head != null) {
+            ListNode next_node = head.next;
+            head.next = prev;
+            prev = head;
+            head = next_node;
         }
-        head = prev;
-        return head;
+        return prev;
     }
 }
