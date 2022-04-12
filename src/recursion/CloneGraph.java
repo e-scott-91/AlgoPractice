@@ -7,7 +7,10 @@ public class CloneGraph {
 
     public Node cloneGraph(Node node) {
         if (node == null) return node;
-        return dfsClone(node);
+        HashMap<Integer, Node> map = new HashMap<>();
+        HashSet<Integer> visited = new HashSet<>();
+        dfsCloneHelper(node, map, visited);
+        return map.get(node.val);
     }
 
     public Node dfsClone(Node root) {
@@ -33,3 +36,28 @@ public class CloneGraph {
         }
     }
 }
+
+// Alternative solution
+//    public Node cloneGraph(Node node) {
+//        return node==null ? null : explore(
+//                node,new HashMap<Node,Node>()
+//        );
+//    }
+//
+//    public Node explore(Node node, Map<Node,Node> map){
+//
+//        if(map.containsKey(node)){
+//            return map.get(node);
+//        }
+//
+//        Node newNode=new Node(node.val);
+//        map.put(node,newNode);
+//
+//        newNode.neighbors=new ArrayList<Node>();
+//
+//        for(Node temp: node.neighbors){
+//            newNode.neighbors.add(explore(temp,map));
+//        }
+//
+//        return newNode;
+//    }
