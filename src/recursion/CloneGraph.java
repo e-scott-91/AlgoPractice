@@ -13,13 +13,6 @@ public class CloneGraph {
         return map.get(node.val);
     }
 
-    public Node dfsClone(Node root) {
-        HashMap<Integer, Node> map = new HashMap<>();
-        HashSet<Integer> visited = new HashSet<>();
-        dfsCloneHelper(root, map, visited);
-        return map.get(root.val);
-    }
-
     public void dfsCloneHelper(Node node, HashMap<Integer, Node> map, HashSet<Integer> visited) {
         if (visited.contains(node.val)) return;
 
