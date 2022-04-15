@@ -1,11 +1,11 @@
 package binaryTree;
 
 public class TreeNode {
-    String value;
+    int value;
     TreeNode left;
     TreeNode right;
 
-    public TreeNode(String value) {
+    public TreeNode(int value) {
         this.value = value;
     }
 }
