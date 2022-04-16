@@ -27,7 +27,7 @@ public class CourseSchedule {
     private void buildGraph(int vertices, int[][] edges){
         //initialize empty list for every vertex
         for(int i=0; i<vertices; i++)
-            adjList.add(new ArrayList<Integer>());
+            adjList.add(new ArrayList<>());
 
         //establish the edges between the vertices
         for(int i=0; i<edges.length; i++)
