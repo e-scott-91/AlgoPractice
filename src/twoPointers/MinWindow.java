@@ -6,6 +6,7 @@ import java.util.Map;
 public class MinWindow {
 
     public String minWindow(String s, String t) {
+
         int i=0,j=0;
         int minLength = Integer.MAX_VALUE;
         Map<Character, Integer> map = new HashMap<>();

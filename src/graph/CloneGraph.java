@@ -1,4 +1,4 @@
-package recursion;
+package graph;
 
 import java.util.HashMap;
 import java.util.HashSet;
@@ -7,8 +7,8 @@ public class CloneGraph {
 
     public Node cloneGraph(Node node) {
         if (node == null) return null;
-        HashMap<Integer, Node> map = new HashMap<Integer, Node>();
-        HashSet<Integer> visited = new HashSet<Integer>();
+        HashMap<Integer, Node> map = new HashMap<>();
+        HashSet<Integer> visited = new HashSet<>();
         dfsCloneHelper(node, map, visited);
         return map.get(node.val);
     }

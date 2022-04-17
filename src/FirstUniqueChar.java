@@ -5,7 +5,10 @@ public class FirstUniqueChar {
     // Returns the index of the first character in the string which is unique
     // within the string
     public int firstUniqChar(String s) {
+
+        // character and index
         HashMap<Character, Integer> map = new HashMap<>();
+
         for (int i=0; i<s.length(); i++) {
             char current = s.charAt(i);
             if (!map.containsKey(current)) {
@@ -16,7 +19,8 @@ public class FirstUniqueChar {
         }
 
         int min = Integer.MAX_VALUE;
-        for (char c: map.keySet()){
+
+        for (char c: map.keySet()) {
             if (map.get(c) != -1 && map.get(c) < min) {
                 min = map.get(c);
             }
