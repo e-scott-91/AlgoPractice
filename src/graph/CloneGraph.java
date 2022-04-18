@@ -7,6 +7,7 @@ public class CloneGraph {
 
     public Node cloneGraph(Node node) {
         if (node == null) return null;
+        // map to store cloned nodes vals with the new node
         HashMap<Integer, Node> map = new HashMap<>();
         HashSet<Integer> visited = new HashSet<>();
         dfsCloneHelper(node, map, visited);
