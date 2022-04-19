@@ -9,14 +9,15 @@ public class UniqueBST {
         int [] dp = new int [n +1];
 
         dp[0] = 1;
+        dp[1] = 1;
 
         // iterate to fill dp array incrementally for each number
         // up to target
-        for (int i = 1; i < n + 1; ++i) {
+        for (int i = 2; i <= n ; i++) {
 
-            for (int j = 0; j < i; ++j) {
+            for (int j = 1; j <= i; j++) {
 
-                dp[i] += dp[j] * dp[i - j -1];
+                dp[i] += dp[j-1] * dp[i - j];
 
             }
         }
