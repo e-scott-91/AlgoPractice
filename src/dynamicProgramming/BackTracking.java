@@ -7,6 +7,8 @@ public class BackTracking {
 
     List<List<Integer>> subsets;
 
+    // provides a list of all subsets of the ints
+    // in the original array
     public List<List<Integer>> subsets(int[] nums) {
         subsets = new ArrayList<>();
 
