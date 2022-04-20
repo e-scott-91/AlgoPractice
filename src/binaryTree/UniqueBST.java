@@ -13,6 +13,8 @@ public class UniqueBST {
 
         // iterate to fill dp array incrementally for each number
         // up to target
+        // j is where the root is, j - 1 is to the left of root, i-j is to the
+        // right of root
         for (int i = 2; i <= n ; i++) {
 
             for (int j = 1; j <= i; j++) {
