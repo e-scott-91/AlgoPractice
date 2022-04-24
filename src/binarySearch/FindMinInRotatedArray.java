@@ -1,6 +1,6 @@
 package binarySearch;
 
-public class FindMin {
+public class FindMinInRotatedArray {
 
     // finding the minimum in a rotated
     // sorted array. O(log n)
