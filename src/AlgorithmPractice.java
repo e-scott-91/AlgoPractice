@@ -1,3 +1,4 @@
+import dynamicProgramming.DistinctSubsequences;
 import dynamicProgramming.LengthSubSeq;
 import dynamicProgramming.LongestPalindromicSubstring;
 import twoPointers.PalindromeInt;
@@ -16,6 +17,8 @@ public class AlgorithmPractice {
         LengthSubSeq test = new LengthSubSeq();
         int result = test.lengthOfLIS(array);
         System.out.println(result);
+        DistinctSubsequences ds = new DistinctSubsequences();
+        ds.numDistinct("rabbbit", "rabbit");
 //        rotateArray.rotate(array, 2);
 //        PalindromeInt palendrome = new PalindromeInt();
 //        Boolean result = palendrome.isPalindrome(1231);
