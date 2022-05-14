@@ -46,7 +46,7 @@ public class CourseScheduleII {
 
         status[vertex] = -1;
 
-        for(int neighbor: adj[vertex]) {
+        for (int neighbor: adj[vertex]) {
             if(isCyclic(topoSort, status, adj, neighbor)) {
                 return true;
             }

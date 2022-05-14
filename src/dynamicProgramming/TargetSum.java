@@ -1,5 +1,8 @@
 package dynamicProgramming;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class TargetSum {
 
     public int findTargetSumWays(int[] nums, int target) {
@@ -51,6 +54,30 @@ public class TargetSum {
             }
         }
         return dp[elements][sum];
+
+    }
+
+    //Using cache and memoization
+    public int findTargetSumWaysMemo(int[] nums, int target) {
+
+        Map<String,Integer> cache = new HashMap<>();
+        return rec(nums, 0, target, cache);
+    }
+
+    public int rec(int[] nums, int i, int v, Map<String,Integer> cache) {
+
+        String entry = i + "," + v;
+
+        if(cache.containsKey(entry)) return cache.get(entry);
+
+        if(i == nums.length) return v == 0 ? 1 : 0;
+
+        int sum = rec(nums, i+1, v + nums[i], cache) +
+                rec(nums, i+1, v - nums[i], cache);
+
+        cache.put(entry, sum);
+
+        return sum;
 
     }
 }
